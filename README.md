@@ -41,11 +41,13 @@ Received value = 4
 
 To simulate server-client interaction on one machine, use two terminals (one for server, one for client).  
 First:  
-Compile Server: g++ -std=c++11 -o SocketServer SocketServer.cpp  
+Compile Server(C++): g++ -std=c++11 -o SocketServer SocketServer.cpp  
+Or Compile Server(C): gcc -std=c11 SocketServer.c -o SocketServer  
 Run Server: ./SocketServer 51717  
 *note 51717 is an example port number  
 
 Then:  
-Compile Client: g++ -std=c++11 -o SocketClient SocketClient.cpp  
+Compile Client(C++): g++ -std=c++11 -o SocketClient SocketClient.cpp  
+Or Compile Server(C): gcc -std=c11 SocketClient.c -o SocketClient  
 Run Client: ./SocketClient localhost 51717 < input.txt  
 *note localhost is an example address where the server program is located (to simulate the interaction on one machine)  
